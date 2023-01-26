@@ -45,11 +45,11 @@ public class BasicShape {
         return area;
     }
     public double circlePerimeter(){
-        perimeter=2*piValue*this.circleRadius;
+        perimeter=2*PiValue*this.circleRadius;
         return perimeter;
     }
     public double circleArea(){
-        area=piValue*this.circleRadius*this.circleRadius;
+        area=PiValue*this.circleRadius*this.circleRadius;
         return area;
     }
     public double rectangleArea(){
