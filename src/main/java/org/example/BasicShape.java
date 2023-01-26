@@ -18,7 +18,7 @@ public class BasicShape {
     double area;
     double perimeter;
 
-    static final double piValue = 3.14;
+    public static final double PiValue = 3.14;
 
     BasicShape(String shape,double triangleLength1,double triangleLength2,double triangleLength3){
         this.shapeType=shape;
