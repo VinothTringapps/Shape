@@ -20,7 +20,7 @@ public class BasicShape {
     double area;
     double perimeter;
 
-    public static final double temp = 3.14;
+    public static final double PI = 3.14;
 
     BasicShape(String shape,double triangleLength1,double triangleLength2,double triangleLength3){
         this.shapeType=shape;
@@ -47,11 +47,11 @@ public class BasicShape {
         return area;
     }
     public double circlePerimeter(){
-        perimeter=2*temp*this.circleRadius;
+        perimeter=2*PI*this.circleRadius;
         return perimeter;
     }
     public double circleArea(){
-        area=temp*this.circleRadius*this.circleRadius;
+        area=PI*this.circleRadius*this.circleRadius;
         return area;
     }
     public double rectangleArea(){
