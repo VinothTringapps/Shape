@@ -20,7 +20,7 @@ public class BasicShape {
     double area;
     double perimeter;
 
-    public static final double PiValue = 3.14;
+    public static final double piValue = 3.14;
 
     BasicShape(String shape,double triangleLength1,double triangleLength2,double triangleLength3){
         this.shapeType=shape;
@@ -47,11 +47,11 @@ public class BasicShape {
         return area;
     }
     public double circlePerimeter(){
-        perimeter=2*PiValue*this.circleRadius;
+        perimeter=2*piValue*this.circleRadius;
         return perimeter;
     }
     public double circleArea(){
-        area=PiValue*this.circleRadius*this.circleRadius;
+        area=piValue*this.circleRadius*this.circleRadius;
         return area;
     }
     public double rectangleArea(){
@@ -81,8 +81,10 @@ public class BasicShape {
                 double triangleLength3=sc.nextDouble();
                 BasicShape t=new BasicShape(shape,triangleLength1,triangleLength2,triangleLength3);
                 l.info("\nTriangle \n-------");
-                l.info("Area of the Triangle :"+t.triangleArea());
-                l.info("Perimeter of the Triangle :"+t.trianglePerimeter());
+                String area="Area of the Triangle :"+t.triangleArea();
+                l.info(area);
+                String perimeter="Perimeter of the Triangle :"+t.trianglePerimeter();
+                l.info(perimeter);
                 l.info(decoration);
                 sc.nextLine();
             }
@@ -93,8 +95,10 @@ public class BasicShape {
                 double rectangleWidth=sc.nextDouble();
                 BasicShape r=new BasicShape(shape,rectangleLength,rectangleWidth);
                 l.info("\n Rectangle\n---------");
-                l.info("Area of the Rectangle :"+r.rectangleArea());
-                l.info("Perimeter of the Rectangle :"+r.rectanglePerimeter());
+                String area="Area of the Rectangle :"+r.rectangleArea();
+                l.info(area);
+                String perimeter="Perimeter of the Rectangle :"+r.rectanglePerimeter();
+                l.info(perimeter);
                 l.info(decoration);
 
                 sc.nextLine();
@@ -105,8 +109,10 @@ public class BasicShape {
                 double circleRadius=sc.nextDouble();
                 BasicShape c=new BasicShape(shape,circleRadius);
                 l.info("\n Circle \n------");
-                l.info("Area of the Circle :" +c.circleArea());
-                l.info("Perimeter of the Circle :"+c.circlePerimeter());
+                String area="Area of the Circle :" +c.circleArea();
+                l.info(area);
+                String perimeter="Perimeter of the Circle :"+c.circlePerimeter();
+                l.info(perimeter);
                 l.info(decoration);
 
                 sc.nextLine();
