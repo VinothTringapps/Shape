@@ -20,7 +20,7 @@ public class BasicShape {
     double area;
     double perimeter;
 
-    public static final double piValue = 3.14;
+    public static final double temp = 3.14;
 
     BasicShape(String shape,double triangleLength1,double triangleLength2,double triangleLength3){
         this.shapeType=shape;
@@ -47,11 +47,11 @@ public class BasicShape {
         return area;
     }
     public double circlePerimeter(){
-        perimeter=2*piValue*this.circleRadius;
+        perimeter=2*temp*this.circleRadius;
         return perimeter;
     }
     public double circleArea(){
-        area=piValue*this.circleRadius*this.circleRadius;
+        area=temp*this.circleRadius*this.circleRadius;
         return area;
     }
     public double rectangleArea(){
@@ -67,9 +67,10 @@ public class BasicShape {
         Logger l=Logger.getLogger("com.api.jar");
         String shape;
         String decoration="-----------------------------------------------------";
-        while(true) {
 
-            l.info("1.Triangle \n 2.Rectangle \n 3.Circle\n");
+        do {
+
+            l.info("\nTriangle \nRectangle \nCircle");
             l.info("Enter the Type You Want :");
             shape = sc.nextLine();
             if(shape.equalsIgnoreCase("triangle")){
@@ -122,7 +123,7 @@ public class BasicShape {
                 l.info(decoration);
 
             }
-        }
+        }while (shape.isEmpty());
 
 
     }
