@@ -7,6 +7,8 @@ package org.example;
 //        - A method that calculates and returns the area of the shape. "
 
 import java.util.*;
+import java.util.logging.Logger;
+
 public class BasicShape {
     String shapeType;
     double triangleLength1;
@@ -62,55 +64,56 @@ public class BasicShape {
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        Logger l=Logger.getLogger("com.api.jar");
         String shape;
         String decoration="-----------------------------------------------------";
         while(true) {
 
-            System.out.println("1.Triangle \n 2.Rectangle \n 3.Circle\n");
-            System.out.println("Enter the Type You Want :");
+            l.info("1.Triangle \n 2.Rectangle \n 3.Circle\n");
+            l.info("Enter the Type You Want :");
             shape = sc.nextLine();
             if(shape.equalsIgnoreCase("triangle")){
-                System.out.println("Enter the length of first Side :");
+                l.info("Enter the length of first Side :");
                 double triangleLength1=sc.nextDouble();
-                System.out.println("Enter the Length of Second Side :");
+                l.info("Enter the Length of Second Side :");
                 double triangleLength2=sc.nextDouble();
-                System.out.println("Enter the Length of Third Side :");
+                l.info("Enter the Length of Third Side :");
                 double triangleLength3=sc.nextDouble();
                 BasicShape t=new BasicShape(shape,triangleLength1,triangleLength2,triangleLength3);
-                System.out.println("\nTriangle \n-------");
-                System.out.println("Area of the Triangle :"+t.triangleArea());
-                System.out.println("Perimeter of the Triangle :"+t.trianglePerimeter());
-                System.out.println(decoration);
+                l.info("\nTriangle \n-------");
+                l.info("Area of the Triangle :"+t.triangleArea());
+                l.info("Perimeter of the Triangle :"+t.trianglePerimeter());
+                l.info(decoration);
                 sc.nextLine();
             }
             else if (shape.equalsIgnoreCase("rectangle")) {
-                System.out.println("Enter the Length of the Rectangle :");
+                l.info("Enter the Length of the Rectangle :");
                 double rectangleLength=sc.nextDouble();
-                System.out.println("Enter the Width of the Rectangle :");
+                l.info("Enter the Width of the Rectangle :");
                 double rectangleWidth=sc.nextDouble();
                 BasicShape r=new BasicShape(shape,rectangleLength,rectangleWidth);
-                System.out.println("\n Rectangle\n---------");
-                System.out.println("Area of the Rectangle :"+r.rectangleArea());
-                System.out.println("Perimeter of the Rectangle :"+r.rectanglePerimeter());
-                System.out.println(decoration);
+                l.info("\n Rectangle\n---------");
+                l.info("Area of the Rectangle :"+r.rectangleArea());
+                l.info("Perimeter of the Rectangle :"+r.rectanglePerimeter());
+                l.info(decoration);
 
                 sc.nextLine();
 
             }
             else if (shape.equalsIgnoreCase("Circle")) {
-                System.out.println("Enter the Radius of the Circle :");
+                l.info("Enter the Radius of the Circle :");
                 double circleRadius=sc.nextDouble();
                 BasicShape c=new BasicShape(shape,circleRadius);
-                System.out.println("\n Circle \n------");
-                System.out.println("Area of the Circle :" +c.circleArea());
-                System.out.println("Perimeter of the Circle :"+c.circlePerimeter());
-                System.out.println(decoration);
+                l.info("\n Circle \n------");
+                l.info("Area of the Circle :" +c.circleArea());
+                l.info("Perimeter of the Circle :"+c.circlePerimeter());
+                l.info(decoration);
 
                 sc.nextLine();
             }
             else {
-                System.out.println("Wrong shape !");
-                System.out.println(decoration);
+                l.info("Wrong shape !");
+                l.info(decoration);
 
             }
         }
